@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="allien" class="org.example.Allien" scope="singleton">
+        <constructor-arg value="21"/>
+        <constructor-arg ref="laptop1"/>
+        <constructor-arg value="Loki"/>
+        <property name="age" value="21"></property>
+        <property name="laptop" ref="laptop1"></property>
+    </bean>
+
+    <bean id="laptop1" class="org.example.Laptop"></bean>
+
+</beans>
